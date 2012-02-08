@@ -1,0 +1,410 @@
+InfoKey: Creator
+InfoValue: Cloud API Docs Plugin
+InfoKey: Title
+InfoValue: Cloud Files&#8482; Developer Guide
+InfoKey: Producer
+InfoValue: Apache FOP Version 1.0
+InfoKey: CreationDate
+InfoValue: D:20111115123218-06'00'
+PdfID0: e941cffd7c16fbaba852f26754a562f8
+PdfID1: e941cffd7c16fbaba852f26754a562f8
+NumberOfPages: 51
+BookmarkTitle: Cloud Files&#8482; Developer Guide
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkTitle: Table of Contents
+BookmarkLevel: 1
+BookmarkPageNumber: 3
+BookmarkTitle: 1. Overview
+BookmarkLevel: 1
+BookmarkPageNumber: 8
+BookmarkTitle: 1.1.&#160;Intended Audience
+BookmarkLevel: 2
+BookmarkPageNumber: 8
+BookmarkTitle: 1.2.&#160;Document Change History
+BookmarkLevel: 2
+BookmarkPageNumber: 9
+BookmarkTitle: 1.3.&#160;Additional Resources
+BookmarkLevel: 2
+BookmarkPageNumber: 9
+BookmarkTitle: 2. Concepts
+BookmarkLevel: 1
+BookmarkPageNumber: 10
+BookmarkTitle: 2.1.&#160;Accounts
+BookmarkLevel: 2
+BookmarkPageNumber: 10
+BookmarkTitle: 2.2.&#160;Authentication
+BookmarkLevel: 2
+BookmarkPageNumber: 10
+BookmarkTitle: 2.3.&#160;Permissions
+BookmarkLevel: 2
+BookmarkPageNumber: 10
+BookmarkTitle: 2.4.&#160;Containers
+BookmarkLevel: 2
+BookmarkPageNumber: 10
+BookmarkTitle: 2.5.&#160;Objects
+BookmarkLevel: 2
+BookmarkPageNumber: 11
+BookmarkTitle: 2.6.&#160;Operations
+BookmarkLevel: 2
+BookmarkPageNumber: 11
+BookmarkTitle: 2.7.&#160;CDN-Enabled Containers
+BookmarkLevel: 2
+BookmarkPageNumber: 11
+BookmarkTitle: 2.8.&#160;Language-Specific API Bindings
+BookmarkLevel: 2
+BookmarkPageNumber: 12
+BookmarkTitle: 3. General API Information
+BookmarkLevel: 1
+BookmarkPageNumber: 14
+BookmarkTitle: 3.1.&#160;Authentication
+BookmarkLevel: 2
+BookmarkPageNumber: 14
+BookmarkTitle: 3.2.&#160;Overview of API Operations
+BookmarkLevel: 2
+BookmarkPageNumber: 16
+BookmarkTitle: 4. API Operations for Storage Services
+BookmarkLevel: 1
+BookmarkPageNumber: 18
+BookmarkTitle: 4.1.&#160;Storage Account Services
+BookmarkLevel: 2
+BookmarkPageNumber: 18
+BookmarkTitle: 4.1.1.&#160;List Containers
+BookmarkLevel: 3
+BookmarkPageNumber: 18
+BookmarkTitle: 4.1.1.1.&#160;Serialized List Output
+BookmarkLevel: 4
+BookmarkPageNumber: 19
+BookmarkTitle: 4.1.1.2.&#160;List Large Number of Containers
+BookmarkLevel: 4
+BookmarkPageNumber: 20
+BookmarkTitle: 4.1.2.&#160;Retrieve Account Metadata
+BookmarkLevel: 3
+BookmarkPageNumber: 21
+BookmarkTitle: 4.2.&#160;Storage Container Services
+BookmarkLevel: 2
+BookmarkPageNumber: 22
+BookmarkTitle: 4.2.1.&#160;List Objects
+BookmarkLevel: 3
+BookmarkPageNumber: 22
+BookmarkTitle: 4.2.1.1.&#160;Serialized List Output
+BookmarkLevel: 4
+BookmarkPageNumber: 23
+BookmarkTitle: 4.2.1.2.&#160;List Large Number of Objects
+BookmarkLevel: 4
+BookmarkPageNumber: 24
+BookmarkTitle: 4.2.1.3.&#160;Pseudo-Hierarchical Folders/Directories
+BookmarkLevel: 4
+BookmarkPageNumber: 25
+BookmarkTitle: 4.2.2.&#160;Create Container
+BookmarkLevel: 3
+BookmarkPageNumber: 27
+BookmarkTitle: 4.2.3.&#160;Delete Container
+BookmarkLevel: 3
+BookmarkPageNumber: 28
+BookmarkTitle: 4.2.4.&#160;Retrieve Container Metadata
+BookmarkLevel: 3
+BookmarkPageNumber: 29
+BookmarkTitle: 4.3.&#160;Storage Object Services
+BookmarkLevel: 2
+BookmarkPageNumber: 29
+BookmarkTitle: 4.3.1.&#160;Retrieve Object
+BookmarkLevel: 3
+BookmarkPageNumber: 30
+BookmarkTitle: 4.3.2.&#160;Create/Update Object
+BookmarkLevel: 3
+BookmarkPageNumber: 31
+BookmarkTitle: 4.3.2.1.&#160;Large Object Creation
+BookmarkLevel: 4
+BookmarkPageNumber: 32
+BookmarkTitle: 4.3.2.2.&#160;Chunked Transfer Encoding
+BookmarkLevel: 4
+BookmarkPageNumber: 33
+BookmarkTitle: 4.3.2.3.&#160;Assigning CORS Headers to Requests
+BookmarkLevel: 4
+BookmarkPageNumber: 34
+BookmarkTitle: 4.3.2.4.&#160;Enabling File Compression with the Content-Encoding Header
+BookmarkLevel: 4
+BookmarkPageNumber: 34
+BookmarkTitle: 4.3.2.5.&#160;Enabling Browser Bypass with the Content-Disposition Header
+BookmarkLevel: 4
+BookmarkPageNumber: 35
+BookmarkTitle: 4.3.3.&#160;Copy Object
+BookmarkLevel: 3
+BookmarkPageNumber: 35
+BookmarkTitle: 4.3.4.&#160;Delete Object
+BookmarkLevel: 3
+BookmarkPageNumber: 36
+BookmarkTitle: 4.3.5.&#160;Retrieve Object Metadata
+BookmarkLevel: 3
+BookmarkPageNumber: 36
+BookmarkTitle: 4.3.6.&#160;Update Object Metadata
+BookmarkLevel: 3
+BookmarkPageNumber: 37
+BookmarkTitle: 5. API Operations for CDN Services
+BookmarkLevel: 1
+BookmarkPageNumber: 38
+BookmarkTitle: 5.1.&#160;CDN Account Operations
+BookmarkLevel: 2
+BookmarkPageNumber: 38
+BookmarkTitle: 5.1.1.&#160;List CDN-Enabled Containers
+BookmarkLevel: 3
+BookmarkPageNumber: 38
+BookmarkTitle: 5.1.1.1.&#160;Serialized List Output
+BookmarkLevel: 4
+BookmarkPageNumber: 39
+BookmarkTitle: 5.2.&#160;CDN Object Services
+BookmarkLevel: 2
+BookmarkPageNumber: 41
+BookmarkTitle: 5.2.1.&#160;Purge CDN-Enabled Objects
+BookmarkLevel: 3
+BookmarkPageNumber: 41
+BookmarkTitle: 5.3.&#160;CDN Container Services
+BookmarkLevel: 2
+BookmarkPageNumber: 42
+BookmarkTitle: 5.3.1.&#160;CDN-Enabled Container
+BookmarkLevel: 3
+BookmarkPageNumber: 42
+BookmarkTitle: 5.3.2.&#160;List CDN-Enabled Container Metadata
+BookmarkLevel: 3
+BookmarkPageNumber: 43
+BookmarkTitle: 5.3.3.&#160;Purge CDN-Enabled Containers
+BookmarkLevel: 3
+BookmarkPageNumber: 44
+BookmarkTitle: 5.3.4.&#160;Update CDN-Enabled Container Metadata
+BookmarkLevel: 3
+BookmarkPageNumber: 44
+BookmarkTitle: 5.3.5.&#160;CDN-Enabled Containers Served via SSL
+BookmarkLevel: 3
+BookmarkPageNumber: 44
+BookmarkTitle: 5.3.6.&#160;Streaming CDN-Enabled Containers
+BookmarkLevel: 3
+BookmarkPageNumber: 45
+BookmarkTitle: 6. Examples and Troubleshooting
+BookmarkLevel: 1
+BookmarkPageNumber: 47
+BookmarkTitle: 6.1.&#160;Using cURL
+BookmarkLevel: 2
+BookmarkPageNumber: 47
+BookmarkTitle: 6.1.1.&#160;Authentication
+BookmarkLevel: 3
+BookmarkPageNumber: 47
+BookmarkTitle: 6.1.2.&#160;Determining Storage Usage
+BookmarkLevel: 3
+BookmarkPageNumber: 48
+BookmarkTitle: 6.1.3.&#160;Creating a Storage Container
+BookmarkLevel: 3
+BookmarkPageNumber: 49
+BookmarkTitle: 6.1.4.&#160;Uploading a Storage Object
+BookmarkLevel: 3
+BookmarkPageNumber: 49
+BookmarkTitle: 6.1.5.&#160;CDN-Enabling the Container
+BookmarkLevel: 3
+BookmarkPageNumber: 50
+BookmarkTitle: 6.1.6.&#160;Other cURL Commands
+BookmarkLevel: 3
+BookmarkPageNumber: 51
+PageLabelNewIndex: 1
+PageLabelStart: 1
+PageLabelPrefix: i
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 2
+PageLabelStart: 1
+PageLabelPrefix: ii
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 3
+PageLabelStart: 1
+PageLabelPrefix: iii
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 4
+PageLabelStart: 1
+PageLabelPrefix: iv
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 5
+PageLabelStart: 1
+PageLabelPrefix: v
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 6
+PageLabelStart: 1
+PageLabelPrefix: vi
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 7
+PageLabelStart: 1
+PageLabelPrefix: vii
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 8
+PageLabelStart: 1
+PageLabelPrefix: 1
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 9
+PageLabelStart: 1
+PageLabelPrefix: 2
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 10
+PageLabelStart: 1
+PageLabelPrefix: 3
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 11
+PageLabelStart: 1
+PageLabelPrefix: 4
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 12
+PageLabelStart: 1
+PageLabelPrefix: 5
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 13
+PageLabelStart: 1
+PageLabelPrefix: 6
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 14
+PageLabelStart: 1
+PageLabelPrefix: 7
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 15
+PageLabelStart: 1
+PageLabelPrefix: 8
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 16
+PageLabelStart: 1
+PageLabelPrefix: 9
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 17
+PageLabelStart: 1
+PageLabelPrefix: 10
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 18
+PageLabelStart: 1
+PageLabelPrefix: 11
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 19
+PageLabelStart: 1
+PageLabelPrefix: 12
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 20
+PageLabelStart: 1
+PageLabelPrefix: 13
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 21
+PageLabelStart: 1
+PageLabelPrefix: 14
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 22
+PageLabelStart: 1
+PageLabelPrefix: 15
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 23
+PageLabelStart: 1
+PageLabelPrefix: 16
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 24
+PageLabelStart: 1
+PageLabelPrefix: 17
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 25
+PageLabelStart: 1
+PageLabelPrefix: 18
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 26
+PageLabelStart: 1
+PageLabelPrefix: 19
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 27
+PageLabelStart: 1
+PageLabelPrefix: 20
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 28
+PageLabelStart: 1
+PageLabelPrefix: 21
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 29
+PageLabelStart: 1
+PageLabelPrefix: 22
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 30
+PageLabelStart: 1
+PageLabelPrefix: 23
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 31
+PageLabelStart: 1
+PageLabelPrefix: 24
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 32
+PageLabelStart: 1
+PageLabelPrefix: 25
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 33
+PageLabelStart: 1
+PageLabelPrefix: 26
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 34
+PageLabelStart: 1
+PageLabelPrefix: 27
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 35
+PageLabelStart: 1
+PageLabelPrefix: 28
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 36
+PageLabelStart: 1
+PageLabelPrefix: 29
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 37
+PageLabelStart: 1
+PageLabelPrefix: 30
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 38
+PageLabelStart: 1
+PageLabelPrefix: 31
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 39
+PageLabelStart: 1
+PageLabelPrefix: 32
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 40
+PageLabelStart: 1
+PageLabelPrefix: 33
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 41
+PageLabelStart: 1
+PageLabelPrefix: 34
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 42
+PageLabelStart: 1
+PageLabelPrefix: 35
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 43
+PageLabelStart: 1
+PageLabelPrefix: 36
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 44
+PageLabelStart: 1
+PageLabelPrefix: 37
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 45
+PageLabelStart: 1
+PageLabelPrefix: 38
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 46
+PageLabelStart: 1
+PageLabelPrefix: 39
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 47
+PageLabelStart: 1
+PageLabelPrefix: 40
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 48
+PageLabelStart: 1
+PageLabelPrefix: 41
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 49
+PageLabelStart: 1
+PageLabelPrefix: 42
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 50
+PageLabelStart: 1
+PageLabelPrefix: 43
+PageLabelNumStyle: NoNumber
+PageLabelNewIndex: 51
+PageLabelStart: 1
+PageLabelPrefix: 44
+PageLabelNumStyle: NoNumber
