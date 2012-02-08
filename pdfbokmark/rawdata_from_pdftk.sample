@@ -1,0 +1,43 @@
+InfoKey: Creator
+InfoValue: application name or creator note
+InfoKey: Title
+InfoValue: Document title
+InfoKey: Author
+InfoValue: Author name
+InfoKey: Producer
+InfoValue: PDF producer name or note
+InfoKey: Keywords
+InfoValue: comma, separated, keywords
+InfoKey: Subject
+InfoValue: Subject description
+InfoKey: ModDate
+InfoValue: D:20061204092842
+InfoKey: CreationDate
+InfoValue: D:20061204092842
+PdfID0: 2c5870f9d6df1b911ff4569186c9748
+PdfID1: 2c5870f9d6df1b911ff4569186c9748
+NumberOfPages: 4
+BookmarkTitle: Cloud Files&#8482; Developer Guide
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkTitle: Chapter 1
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkTitle: Section 1.1
+BookmarkLevel: 2
+BookmarkPageNumber: 2
+BookmarkTitle: Section 1.1.1
+BookmarkLevel: 3
+BookmarkPageNumber: 3
+BookmarkTitle: Section 1.2.2
+BookmarkLevel: 3
+BookmarkPageNumber: 3
+BookmarkTitle: Section 1.2
+BookmarkLevel: 2
+BookmarkPageNumber: 4
+BookmarkTitle: Section 1.2.1
+BookmarkLevel: 3
+BookmarkPageNumber: 4
+BookmarkTitle: Section 1.3
+BookmarkLevel: 2
+BookmarkPageNumber: 3

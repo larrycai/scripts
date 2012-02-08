@@ -1,48 +1,55 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
-$stderr.puts "start converting ..."
-pdfHead = Hash.new
-pdfBookmarks = Array.new
-pkey=""
-ptitle=""
-plevel=""
-STDIN.each {|line| 
-  name,value = line.split(/: |\n/)
-  if(name=="InfoKey")
-    pkey = value
-  elsif(name=="InfoValue")
-    pvalue = value
-    pdfHead[pkey] = pvalue
-    #print pkey,pvalue,"\n"
-  elsif(name=="BookmarkTitle")
-    ptitle = value
-  elsif(name=="BookmarkLevel")
-    plevel = value
-  elsif(name=="BookmarkPageNumber")
-    pnumber= value
-    pdfBookmarks += [[ptitle,plevel,pnumber]]
-  else
-    #puts name,value
-  end
-  #p Hash[*line.split(/: |\n/)]
-  #print line
-}
-$stderr.puts "List pdf information"
-#puts pdfHead
-print "[ /Title (",pdfHead["Title"],")\n"
-print "/Author (Author name)\n"
-print "/Subject (Subject description)\n"
-print "/Keywords (comma, separated, keywords)\n"
-print "/ModDate (D:20061204092842)\n"
-print "/CreationDate (",pdfHead["CreationDate"],")\n"
-print "/Creator (",pdfHead["Creator"],")\n"
-print "/Producer (",pdfHead["Producer"],")\n"
-print "/DOCINFO pdfmark\n"
+def getInput
+    pdfHead = Hash.new
+    pdfBookmarks = Array.new
+    pkey=""
+    title=""
+    level=""
+    
+    $stderr.puts "start converting ..."
+    STDIN.each {|line| 
+        name,value = line.split(/: |\n/)
+        case 
+        when name=="InfoKey" then pkey = value
+        when name=="InfoValue" then 
+            pdfHead[pkey] = value
+            #puts value
+        when name=="BookmarkTitle" then title = value
+        when name=="BookmarkLevel" then level = value
+        when name=="BookmarkPageNumber" then 
+            # this is page number
+            pdfBookmarks += [[title,level,value]]
+        else
+            # $stderr.puts "Skipped: #{name}:#{value}"
+        end
+        #p Hash[*line.split(/: |\n/)]
+        #print line
+        #puts pdfHead
+    }
+    return pdfHead,pdfBookmarks
 
-$stderr.puts "\nList bookmark information"
-pdfBookmarks.each { |x| 
-  #p x
-  print "[/Title (",x[0],") /Page ",x[2]," /OUT pdfmark\n"
-}
-#[/Title (Prologue) /Page 1 /OUT pdfmark
+end
+
+def writeInPdfmark(head,bookmark)
+    # http://www.pdflib.com/fileadmin/pdflib/pdf/pdfmark_primer.pdf
+    $stderr.puts "List pdf information"
+    #puts head
+    print "["
+    head.each do |key,value|
+        puts "  /#{key} (#{value}))"
+    end 
+    puts "/DOCINFO pdfmark"
+    
+    # now comes to bookmark
+    $stderr.puts "List bookmark information"
+    bookmark.each { |title,level,number| 
+      #p x
+      puts "[/Title (#{title}) /Page #{number} /OUT pdfmark"
+    }
+    #[/Title (Prologue) /Page 1 /OUT pdfmark
+end
+
+pdfHead,pdfBookmarks = getInput()
+writeInPdfmark(pdfHead,pdfBookmarks)
