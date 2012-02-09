@@ -1,5 +1,31 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
+require 'optparse'
+
+options = {}
+option_parser = OptionParser.new do |opts|
+    executable_name = File.basename($PROGRAM_NAME)
+    opts.banner = "Convert raw metadata from pdftk to pdfmark format
+    Usage: #{executable_name} [options]
+    
+    example: #{executable_name} -i <input> -o <pdfmarks>
+    "
+    # Create a switch
+    opts.on("-o","--output",
+        'output pdfmark file which can be used for gs, default is stdout') do |output_file|
+        options[:output] = output_file
+    end
+    # Create a flag
+    opts.on("-i","--input",
+        'input is the raw data from pdftk command, default is stdin') do |input_file|
+        options[:input] = input_file
+    end
+end
+
+option_parser.parse!
+#puts options.inspect
+#pdfHead,pdfBookmarks = getInput()
+#writeInPdfmark(pdfHead,pdfBookmarks)
 
 def getInput
     pdfHead = Hash.new
@@ -50,6 +76,3 @@ def writeInPdfmark(head,bookmark)
     }
     #[/Title (Prologue) /Page 1 /OUT pdfmark
 end
-
-pdfHead,pdfBookmarks = getInput()
-writeInPdfmark(pdfHead,pdfBookmarks)
