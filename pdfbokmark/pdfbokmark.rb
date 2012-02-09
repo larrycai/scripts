@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
+# encoding: UTF-8
+
+#
+# the count check solution is copied from W.Trevor King http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/pdf-merge.py
+
 require 'optparse'
 
 options = {}
@@ -24,8 +28,7 @@ end
 
 option_parser.parse!
 #puts options.inspect
-#pdfHead,pdfBookmarks = getInput()
-#writeInPdfmark(pdfHead,pdfBookmarks)
+
 
 def getInput
     pdfHead = Hash.new
@@ -34,9 +37,10 @@ def getInput
     title=""
     level=""
     
-    $stderr.puts "start converting ..."
+    $stderr.puts "Start converting ..."
     STDIN.each {|line| 
-        name,value = line.split(/: |\n/)
+        #line = line.encode('utf-8')
+        name,value = line.split(/: |\n/u) # /u means unicode
         case 
         when name=="InfoKey" then pkey = value
         when name=="InfoValue" then 
@@ -64,15 +68,30 @@ def writeInPdfmark(head,bookmark)
     #puts head
     print "["
     head.each do |key,value|
-        puts "  /#{key} (#{value}))"
+        puts "  /#{key} (#{value})"
     end 
     puts "/DOCINFO pdfmark"
     
     # now comes to bookmark
     $stderr.puts "List bookmark information"
-    bookmark.each { |title,level,number| 
+    bookmark.each_with_index { |bmk,i| 
+        count = 0
+        countString = ""
+        title,level,number = bmk
+        #print "index #{i},level #{level} \n"
+        bookmark[i+1..bookmark.size].each {|t,newlevel,n|
+            if newlevel == level
+                break
+            elsif newlevel.to_i == level.to_i + 1
+                count += 1
+            end            
+        }
+        countString = "/Count -#{count}" if count > 0
       #p x
-      puts "[/Title (#{title}) /Page #{number} /OUT pdfmark"
+        puts "[/Title (#{title}) #{countString} /Page #{number} /OUT pdfmark"
     }
     #[/Title (Prologue) /Page 1 /OUT pdfmark
 end
+
+pdfHead,pdfBookmarks = getInput()
+writeInPdfmark(pdfHead,pdfBookmarks)
