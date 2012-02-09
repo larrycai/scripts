@@ -9,28 +9,20 @@ require 'optparse'
 options = {}
 option_parser = OptionParser.new do |opts|
     executable_name = File.basename($PROGRAM_NAME)
-    opts.banner = "Convert raw metadata from pdftk to pdfmark format
-    Usage: #{executable_name} [options]
-    
-    example: #{executable_name} -i <input> -o <pdfmarks>
+    opts.banner = "Convert raw metadata from pdftk to pdfmark format used in ghostscript
+    Usage: #{executable_name} [options]    
     "
     # Create a switch
-    opts.on("-o","--output",
-        'output pdfmark file which can be used for gs, default is stdout') do |output_file|
+    opts.on("-o","--output FILE","input raw metadata from pdftk") do |output_file|
         options[:output] = output_file
     end
     # Create a flag
-    opts.on("-i","--input",
-        'input is the raw data from pdftk command, default is stdin') do |input_file|
+    opts.on("-i","--input FILE","output pdfmark for ghostscript") do |input_file|
         options[:input] = input_file
     end
 end
 
-option_parser.parse!
-#puts options.inspect
-
-
-def getInput
+def getInput(inputfile)
     pdfHead = Hash.new
     pdfBookmarks = Array.new
     pkey=""
@@ -38,7 +30,7 @@ def getInput
     level=""
     
     $stderr.puts "Start converting ..."
-    STDIN.each {|line| 
+    inputfile.each {|line| 
         #line = line.encode('utf-8')
         name,value = line.split(/: |\n/u) # /u means unicode
         case 
@@ -62,15 +54,15 @@ def getInput
 
 end
 
-def writeInPdfmark(head,bookmark)
+def writeInPdfmark(outputfile,head,bookmark)
     # http://www.pdflib.com/fileadmin/pdflib/pdf/pdfmark_primer.pdf
     $stderr.puts "List pdf information"
     #puts head
-    print "["
+    outputfile.print "["
     head.each do |key,value|
-        puts "  /#{key} (#{value})"
+        outputfile.puts "  /#{key} (#{value})"
     end 
-    puts "/DOCINFO pdfmark"
+    outputfile.puts "/DOCINFO pdfmark"
     
     # now comes to bookmark
     $stderr.puts "List bookmark information"
@@ -87,11 +79,26 @@ def writeInPdfmark(head,bookmark)
             end            
         }
         countString = "/Count -#{count}" if count > 0
-      #p x
-        puts "[/Title (#{title}) #{countString} /Page #{number} /OUT pdfmark"
+        outputfile.puts "[/Title (#{title}) #{countString} /Page #{number} /OUT pdfmark"
     }
     #[/Title (Prologue) /Page 1 /OUT pdfmark
 end
 
-pdfHead,pdfBookmarks = getInput()
-writeInPdfmark(pdfHead,pdfBookmarks)
+
+option_parser.parse!
+# puts options.inspect
+
+if options[:input] then
+    input=File.new(options[:input],"r:UTF-8");
+else
+    input=$<
+end   
+
+if options[:output] then
+    output=File.new(options[:output],"w:UTF-8");
+else
+    output=$>
+end   
+    
+pdfHead,pdfBookmarks = getInput(input)
+writeInPdfmark(output,pdfHead,pdfBookmarks)
