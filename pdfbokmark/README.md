@@ -1,24 +1,24 @@
 ### Introduction
+When the pdf are merged by `pdftk`, the bookmark and other metadata are lost, this script is used to convert rawdata generated from `pdftk` to standard pdfmark format.
 
-http://unix.stackexchange.com/questions/17065/add-and-edit-bookmarks-to-pdf/31070#comment42048_31070
-http://stackoverflow.com/questions/2969479/merge-pdfs-with-pdftk-with-bookmarks
+PDF pdfmark file can be applied back to pdf using ghostscript command `gs`
 
-http://www.pdflabs.com/docs/pdftk-cli-examples/
-http://ubuntuforums.org/showthread.php?t=1545064
-http://milan.kupcevic.net/ghostscript-ps-pdf/#marks
-http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/
-http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/pdf-merge.py
+See reference for lots of discussion
+
+### Acknowledgement
+This script is influenced a lot by W.Trevor King especially for unicode handling, and his python script had more complete solution, see <http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/>.
 
 #### Usage
 
 ~~~~~~~~ {.bash}
-pdftk input.pdf dump_data_utf8 > in.info
-pdfbokmark.rb < in.info > pdfmarks # may update in.info before or pdfmarks
+pdftk input.pdf dump_data > in.info
+pdfbokmark.rb <in.info > pdfmarks # may update pdfmarks for broken pages
 pdftk A=book-cover.pdf B=sdcamp.zh.pdf cat A3-4 B3-end A7 output merged.pdf
 gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=result.pdf merged.pdf pdfmarks
 ~~~~~~~~~~~~~~~~
 
 #### PDFmarks
+This is sample rawdata
 
 ~~~~~~~~~~~~~~~~~~~~
 ## generated in.info
@@ -71,3 +71,15 @@ and the output should be something like below, see [pdfmark Reference Manual](ht
 [/Title (Section 1.2.1) /Page 4 /OUT pdfmark
 [/Title (Section 1.3) /Page 3 /OUT pdfmark
 ~~~~~~~~~~~~~~~~~~~~~~
+
+If the title is unicode, it makes tricky to handle.
+
+### Reference
+
+ * http://unix.stackexchange.com/questions/17065/add-and-edit-bookmarks-to-pdf/31070#comment42048_31070
+ * http://stackoverflow.com/questions/2969479/merge-pdfs-with-pdftk-with-bookmarks
+ * http://www.pdflabs.com/docs/pdftk-cli-examples/
+ * http://ubuntuforums.org/showthread.php?t=1545064
+ * http://milan.kupcevic.net/ghostscript-ps-pdf/#marks
+ * http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/
+ * http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/pdf-merge.py

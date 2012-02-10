@@ -2,7 +2,8 @@
 # encoding: UTF-8
 
 #
-# the count check solution is copied from W.Trevor King http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/pdf-merge.py
+# the count check solution and unicode inside pdf
+# are copied from W.Trevor King http://www.physics.drexel.edu/~wking/unfolding-disasters/posts/PDF_bookmarks_with_Ghostscript/
 
 require 'optparse'
 
@@ -21,6 +22,7 @@ option_parser = OptionParser.new do |opts|
         options[:input] = input_file
     end
 end
+
 
 def getInput(inputfile)
     pdfHead = Hash.new
@@ -42,6 +44,15 @@ def getInput(inputfile)
         when name=="BookmarkLevel" then level = value
         when name=="BookmarkPageNumber" then 
             # this is page number
+            if title =~ /&#([0-9]+);/
+                title.gsub!(/&#([0-9]+);/) do |num| 
+                    abc = num[2..-2].to_i.to_s(16)
+                    [abc.hex].pack("U")
+                end
+            else
+                title = title
+            end
+            #puts title
             pdfBookmarks += [[title,level,value]]
         else
             # $stderr.puts "Skipped: #{name}:#{value}"
@@ -60,7 +71,7 @@ def writeInPdfmark(outputfile,head,bookmark)
     #puts head
     outputfile.print "["
     head.each do |key,value|
-        outputfile.puts "  /#{key} (#{value})"
+        outputfile.puts "  /#{key} (#{_pdfmark_unicode(value)})"
     end 
     outputfile.puts "/DOCINFO pdfmark"
     
@@ -78,27 +89,39 @@ def writeInPdfmark(outputfile,head,bookmark)
                 count += 1
             end            
         }
-        countString = "/Count -#{count}" if count > 0
-        outputfile.puts "[/Title (#{title}) #{countString} /Page #{number} /OUT pdfmark"
+        countString = "/Count -#{count} " if count > 0
+        outputfile.puts "[ /Title #{_pdfmark_unicode(title)} /Page #{number} #{countString}/OUT pdfmark"
     }
     #[/Title (Prologue) /Page 1 /OUT pdfmark
 end
 
+# reuse pdf-merge.pl
+# need consider for none unicode to (title) as before
+def _pdfmark_unicode(string)
+    bom_utf16_be = "\u{fe ff}"
+    b= (bom_utf16_be + string).encode("UTF-16BE")
+    output = ""
+    # ugly for remove 00FE00FF -> FEFF
+    index = 0
+    b.each_byte do |byte|
+        if index == 0 or index == 2
+        else 
+            output += "%02X" % byte
+        end
+        index +=1
+    end
+    return "<#{output}>"
+end        
+
+#print _pdfmark_unicode("\u{52 4d 8a 00}")
+#exit
 
 option_parser.parse!
 # puts options.inspect
 
-if options[:input] then
-    input=File.new(options[:input],"r:UTF-8");
-else
-    input=$<
-end   
-
-if options[:output] then
-    output=File.new(options[:output],"w:UTF-8");
-else
-    output=$>
-end   
+input  = options[:input]?  File.open(options[:input],"r:ASCII") : $<;
+output = options[:output]? File.new(options[:output],"w:ASCII"): $>;
+#input.set_encoding(Encoding::UTF-8)
     
 pdfHead,pdfBookmarks = getInput(input)
 writeInPdfmark(output,pdfHead,pdfBookmarks)

@@ -1,0 +1,388 @@
+InfoKey: Creator
+InfoValue: LaTeX with hyperref package
+InfoKey: Producer
+InfoValue: xdvipdfmx (0.7.8)
+InfoKey: CreationDate
+InfoValue: D:20120209141048+08'00'
+NumberOfPages: 59
+BookmarkTitle: &#21069;&#35328;
+BookmarkLevel: 1
+BookmarkPageNumber: 3
+BookmarkTitle: &#29256;&#26412;&#21464;&#21270;
+BookmarkLevel: 1
+BookmarkPageNumber: 7
+BookmarkTitle: &#33268;&#35874;
+BookmarkLevel: 1
+BookmarkPageNumber: 9
+BookmarkTitle: &#30446;&#24405;
+BookmarkLevel: 1
+BookmarkPageNumber: 11
+BookmarkTitle: 1 &#25935;&#25463;&#24320;&#21457;&#21644;Scrum
+BookmarkLevel: 1
+BookmarkPageNumber: 15
+BookmarkTitle: 1.1 &#24037;&#20316;&#29615;&#22659;
+BookmarkLevel: 2
+BookmarkPageNumber: 15
+BookmarkTitle: 1.2 &#31616;&#21333;&#21382;&#21490;
+BookmarkLevel: 2
+BookmarkPageNumber: 15
+BookmarkTitle: 1.2.1 &#25935;&#25463;&#27969;&#27966;
+BookmarkLevel: 3
+BookmarkPageNumber: 16
+BookmarkTitle: 1.3 Scrum &#22522;&#26412;&#30693;&#35782;
+BookmarkLevel: 2
+BookmarkPageNumber: 16
+BookmarkTitle: 1.3.1 &#22522;&#26412;&#35282;&#33394;
+BookmarkLevel: 3
+BookmarkPageNumber: 16
+BookmarkTitle: 1.3.2 &#26694;&#26550;&#36807;&#31243;
+BookmarkLevel: 3
+BookmarkPageNumber: 16
+BookmarkTitle: 1.3.3 &#24120;&#29992;&#30340;&#23454;&#36341;
+BookmarkLevel: 3
+BookmarkPageNumber: 17
+BookmarkTitle: 1.4 &#30456;&#20851;&#30693;&#35782;
+BookmarkLevel: 2
+BookmarkPageNumber: 17
+BookmarkTitle: 1.5 &#35838;&#21518;&#32451;&#20064;
+BookmarkLevel: 2
+BookmarkPageNumber: 17
+BookmarkTitle: 1.6 &#24635;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 18
+BookmarkTitle: 1.7 &#21442;&#32771;
+BookmarkLevel: 2
+BookmarkPageNumber: 18
+BookmarkTitle: 2 &#29256;&#26412;&#25511;&#21046;Git&#21644;&#20195;&#30721;&#23457;&#38405;Gerrit
+BookmarkLevel: 1
+BookmarkPageNumber: 19
+BookmarkTitle: 2.1 &#24037;&#20316;&#29615;&#22659;
+BookmarkLevel: 2
+BookmarkPageNumber: 19
+BookmarkTitle: 2.2 &#20160;&#20040;&#26159;Git
+BookmarkLevel: 2
+BookmarkPageNumber: 19
+BookmarkTitle: 2.2.1 &#38598;&#20013;&#24335;&#21644;&#20998;&#24067;&#24335;
+BookmarkLevel: 3
+BookmarkPageNumber: 19
+BookmarkTitle: 2.3 Git&#22522;&#26412;&#29992;&#27861;
+BookmarkLevel: 2
+BookmarkPageNumber: 19
+BookmarkTitle: 2.3.1 &#23433;&#35013;
+BookmarkLevel: 3
+BookmarkPageNumber: 19
+BookmarkTitle: 2.3.2 &#37197;&#32622; Git
+BookmarkLevel: 3
+BookmarkPageNumber: 20
+BookmarkTitle: 2.3.3 &#24314;&#31435;&#26412;&#22320; Git &#20179;&#24211;
+BookmarkLevel: 3
+BookmarkPageNumber: 20
+BookmarkTitle: 2.3.4 &#31532;&#19968;&#20010;&#25552;&#20132;
+BookmarkLevel: 3
+BookmarkPageNumber: 21
+BookmarkTitle: 2.3.5 Git&#20998;&#25903;&#65288;Branch&#65289;&#21644;&#21512;&#24182;&#65288;Merge&#65289;
+BookmarkLevel: 3
+BookmarkPageNumber: 21
+BookmarkTitle: 2.3.6 Git&#21464;&#22522;&#65288;Rebase&#65289;
+BookmarkLevel: 3
+BookmarkPageNumber: 22
+BookmarkTitle: 2.3.7 Git&#26631;&#35760;&#65288;Tag&#65289;
+BookmarkLevel: 3
+BookmarkPageNumber: 22
+BookmarkTitle: 2.4 Git&#36828;&#31243;&#20179;&#24211;&#36830;&#25509;
+BookmarkLevel: 2
+BookmarkPageNumber: 22
+BookmarkTitle: 2.4.1 &#22312;Gerrit&#20013;&#27880;&#20876;
+BookmarkLevel: 3
+BookmarkPageNumber: 22
+BookmarkTitle: 2.4.2 Git&#20811;&#38534;&#65288;Clone&#65289;
+BookmarkLevel: 3
+BookmarkPageNumber: 23
+BookmarkTitle: 2.4.3 Git&#25512;&#36865;/&#25289;(Push/Pull)
+BookmarkLevel: 3
+BookmarkPageNumber: 23
+BookmarkTitle: 2.5 Git&#30340;&#33391;&#22909;&#20351;&#29992;&#20064;&#24815;
+BookmarkLevel: 2
+BookmarkPageNumber: 23
+BookmarkTitle: 2.5.1 &#25552;&#20132;&#27880;&#37322;&#30340;&#36136;&#37327;
+BookmarkLevel: 3
+BookmarkPageNumber: 24
+BookmarkTitle: 2.6 &#24120;&#29992;&#30340;&#24037;&#20316;&#27169;&#24335;
+BookmarkLevel: 2
+BookmarkPageNumber: 24
+BookmarkTitle: 2.6.1 &#26412;&#22320;&#29305;&#24615;&#20998;&#25903;
+BookmarkLevel: 3
+BookmarkPageNumber: 24
+BookmarkTitle: 2.7 &#20195;&#30721;&#23457;&#38405;&#21644;Gerrit
+BookmarkLevel: 2
+BookmarkPageNumber: 24
+BookmarkTitle: 2.8 Git&#30340;&#32570;&#28857;
+BookmarkLevel: 2
+BookmarkPageNumber: 25
+BookmarkTitle: 2.9 &#30456;&#20851;&#30693;&#35782;
+BookmarkLevel: 2
+BookmarkPageNumber: 25
+BookmarkTitle: 2.9.1 &#20960;&#31181;&#21327;&#35758;
+BookmarkLevel: 3
+BookmarkPageNumber: 25
+BookmarkTitle: 2.10 &#35838;&#21518;&#32451;&#20064;
+BookmarkLevel: 2
+BookmarkPageNumber: 26
+BookmarkTitle: 2.11 &#24635;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 26
+BookmarkTitle: 2.12 &#21442;&#32771;
+BookmarkLevel: 2
+BookmarkPageNumber: 26
+BookmarkTitle: 3 &#25345;&#32493;&#38598;&#25104;
+BookmarkLevel: 1
+BookmarkPageNumber: 27
+BookmarkTitle: 3.1 &#29615;&#22659;&#20934;&#22791;
+BookmarkLevel: 2
+BookmarkPageNumber: 27
+BookmarkTitle: 3.2 &#25345;&#32493;&#38598;&#25104;&#27969;&#31243;
+BookmarkLevel: 2
+BookmarkPageNumber: 27
+BookmarkTitle: 3.3 Maven
+BookmarkLevel: 2
+BookmarkPageNumber: 27
+BookmarkTitle: 3.3.1 &#23433;&#35013;Maven
+BookmarkLevel: 3
+BookmarkPageNumber: 28
+BookmarkTitle: 3.3.2 Maven&#20179;&#24211;&#31649;&#29702;&#22120;&#65306;Nexus
+BookmarkLevel: 3
+BookmarkPageNumber: 28
+BookmarkTitle: 3.3.3 &#31532;&#19968;&#20010;maven&#21629;&#20196;
+BookmarkLevel: 3
+BookmarkPageNumber: 29
+BookmarkTitle: 3.3.4 &#20307;&#20250;&#20004;&#23618;&#32531;&#23384;
+BookmarkLevel: 3
+BookmarkPageNumber: 29
+BookmarkTitle: 3.4 &#25345;&#32493;&#38598;&#25104;&#26381;&#21153;&#22120;&#65306;Jenkins
+BookmarkLevel: 2
+BookmarkPageNumber: 30
+BookmarkTitle: 3.4.1 &#23433;&#35013;
+BookmarkLevel: 3
+BookmarkPageNumber: 30
+BookmarkTitle: 3.4.2 &#23433;&#35013;Git&#25554;&#20214;
+BookmarkLevel: 3
+BookmarkPageNumber: 30
+BookmarkTitle: 3.4.3 &#31995;&#32479;&#37197;&#32622;Maven
+BookmarkLevel: 3
+BookmarkPageNumber: 30
+BookmarkTitle: 3.4.4 &#35774;&#32622;&#26500;&#24314;&#20219;&#21153;
+BookmarkLevel: 3
+BookmarkPageNumber: 30
+BookmarkTitle: 3.5 &#22914;&#20309;&#23454;&#26045;&#25345;&#32493;&#38598;&#25104;
+BookmarkLevel: 2
+BookmarkPageNumber: 30
+BookmarkTitle: 3.6 &#30456;&#20851;&#30693;&#35782;
+BookmarkLevel: 2
+BookmarkPageNumber: 31
+BookmarkTitle: 3.7 &#35838;&#21518;&#32451;&#20064;
+BookmarkLevel: 2
+BookmarkPageNumber: 31
+BookmarkTitle: 3.8 &#24635;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 32
+BookmarkTitle: 3.9 &#21442;&#32771;
+BookmarkLevel: 2
+BookmarkPageNumber: 32
+BookmarkTitle: 4 &#22914;&#20309;&#20889;&#22909;Java&#31243;&#24207;
+BookmarkLevel: 1
+BookmarkPageNumber: 33
+BookmarkTitle: 4.1 &#29615;&#22659;&#20934;&#22791;
+BookmarkLevel: 2
+BookmarkPageNumber: 33
+BookmarkTitle: 4.2 &#20195;&#30721;&#39118;&#26684;&#21644;&#32534;&#31243;&#35268;&#33539;
+BookmarkLevel: 2
+BookmarkPageNumber: 33
+BookmarkTitle: 4.3 &#23433;&#20840;&#20195;&#30721;
+BookmarkLevel: 2
+BookmarkPageNumber: 34
+BookmarkTitle: 4.4 &#21333;&#20803;&#27979;&#35797;
+BookmarkLevel: 2
+BookmarkPageNumber: 34
+BookmarkTitle: 4.5 &#20195;&#30721;&#35206;&#30422;&#29575;
+BookmarkLevel: 2
+BookmarkPageNumber: 34
+BookmarkTitle: 4.6 &#37325;&#26500;
+BookmarkLevel: 2
+BookmarkPageNumber: 34
+BookmarkTitle: 4.7 &#27979;&#35797;&#39537;&#21160;&#24320;&#21457; TDD
+BookmarkLevel: 2
+BookmarkPageNumber: 35
+BookmarkTitle: 4.7.1 &#27979;&#35797;&#39537;&#21160;&#24320;&#21457;&#30340;&#27493;&#39588;
+BookmarkLevel: 3
+BookmarkPageNumber: 35
+BookmarkTitle: 4.7.2 &#21333;&#20803;&#27979;&#35797;&#23601;&#26159;&#25991;&#26723;
+BookmarkLevel: 3
+BookmarkPageNumber: 36
+BookmarkTitle: 4.7.3 &#21333;&#20803;&#27979;&#35797;&#20063;&#35201;&#37325;&#26500;
+BookmarkLevel: 3
+BookmarkPageNumber: 36
+BookmarkTitle: 4.8 &#27979;&#35797;&#27169;&#25311;&#65288;Mock&#65289;
+BookmarkLevel: 2
+BookmarkPageNumber: 36
+BookmarkTitle: 4.9 &#35838;&#21518;&#32451;&#20064;
+BookmarkLevel: 2
+BookmarkPageNumber: 36
+BookmarkTitle: 4.10 &#21442;&#32771;
+BookmarkLevel: 2
+BookmarkPageNumber: 36
+BookmarkTitle: 5 &#38656;&#27714;&#31649;&#29702;&#21644;&#23454;&#20363;&#21270;&#38656;&#27714;
+BookmarkLevel: 1
+BookmarkPageNumber: 39
+BookmarkTitle: 5.1 &#29615;&#22659;&#20934;&#22791;
+BookmarkLevel: 2
+BookmarkPageNumber: 39
+BookmarkTitle: 5.2 &#38656;&#27714;&#30340;&#22256;&#24785;
+BookmarkLevel: 2
+BookmarkPageNumber: 39
+BookmarkTitle: 5.2.1 &#27979;&#35797;&#20154;&#21592;&#30340;&#24037;&#20316;&#25991;&#26723;
+BookmarkLevel: 3
+BookmarkPageNumber: 39
+BookmarkTitle: 5.3 &#29992;&#23454;&#20363;&#21270;&#26469;&#35299;&#20915;&#38656;&#27714;&#30340;&#38382;&#39064;
+BookmarkLevel: 2
+BookmarkPageNumber: 40
+BookmarkTitle: 5.3.1 &#20027;&#35201;&#36807;&#31243;&#27169;&#24335;
+BookmarkLevel: 3
+BookmarkPageNumber: 40
+BookmarkTitle: 5.3.2 &#32593;&#19978;&#20070;&#24215;&#19968;&#20010;&#20363;&#23376;
+BookmarkLevel: 3
+BookmarkPageNumber: 41
+BookmarkTitle: 5.3.3 &#24120;&#35265;&#38382;&#39064;
+BookmarkLevel: 3
+BookmarkPageNumber: 42
+BookmarkTitle: 5.4 &#22914;&#20309;&#23454;&#26045;
+BookmarkLevel: 2
+BookmarkPageNumber: 43
+BookmarkTitle: 5.4.1 &#24490;&#24207;&#28176;&#36827;&#21644;&#29616;&#26377;&#27969;&#31243;&#30340;&#32467;&#21512;
+BookmarkLevel: 3
+BookmarkPageNumber: 43
+BookmarkTitle: 5.4.2 &#36148;&#22312;&#22681;&#19978;
+BookmarkLevel: 3
+BookmarkPageNumber: 43
+BookmarkTitle: 5.5 &#30456;&#20851;&#30693;&#35782;
+BookmarkLevel: 2
+BookmarkPageNumber: 44
+BookmarkTitle: 5.6 &#35838;&#21518;&#32451;&#20064;
+BookmarkLevel: 2
+BookmarkPageNumber: 44
+BookmarkTitle: 5.7 &#24635;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 44
+BookmarkTitle: 5.8 &#21442;&#32771;
+BookmarkLevel: 2
+BookmarkPageNumber: 44
+BookmarkTitle: 6 &#29992;Cucumber&#26469;&#23454;&#20363;&#21270;&#38656;&#27714;
+BookmarkLevel: 1
+BookmarkPageNumber: 45
+BookmarkTitle: 6.1 &#29615;&#22659;&#20934;&#22791;
+BookmarkLevel: 2
+BookmarkPageNumber: 45
+BookmarkTitle: 6.2 Cucumber &#31616;&#20171;
+BookmarkLevel: 2
+BookmarkPageNumber: 45
+BookmarkTitle: 6.3 &#23433;&#35013;
+BookmarkLevel: 2
+BookmarkPageNumber: 46
+BookmarkTitle: 6.4 &#36816;&#34892;Cucumber
+BookmarkLevel: 2
+BookmarkPageNumber: 46
+BookmarkTitle: 6.5 &#19994;&#21153;&#23618;&#65306;Gherkin&#35821;&#35328;
+BookmarkLevel: 2
+BookmarkPageNumber: 47
+BookmarkTitle: 6.6 &#39537;&#21160;&#23618;
+BookmarkLevel: 2
+BookmarkPageNumber: 48
+BookmarkTitle: 6.7 &#24120;&#29992;&#30340;&#30446;&#24405;&#32467;&#26500;
+BookmarkLevel: 2
+BookmarkPageNumber: 48
+BookmarkTitle: 6.8 &#32487;&#32493;&#32593;&#19978;&#20070;&#24215;&#30340;&#20363;&#23376;
+BookmarkLevel: 2
+BookmarkPageNumber: 49
+BookmarkTitle: 6.9 &#24120;&#35265;&#38382;&#39064;
+BookmarkLevel: 2
+BookmarkPageNumber: 50
+BookmarkTitle: 6.9.1 &#25105;&#20204;&#30340;&#31995;&#32479;&#27809;&#26377;&#25509;&#21475;&#33021;&#22815;&#34987;&#36825;&#20040;&#65288;&#25110;&#23481;&#26131;&#65289;&#27979;&#35797;&#24471;&#65311;
+BookmarkLevel: 3
+BookmarkPageNumber: 50
+BookmarkTitle: 6.9.2 Cucumber&#29992;&#36215;&#26469;&#20102;&#65292;&#20063;&#33258;&#21160;&#21270;&#20102;&#65292;&#20294;&#26159;&#27809;&#20154;&#30475;&#65311;
+BookmarkLevel: 3
+BookmarkPageNumber: 50
+BookmarkTitle: 6.10 &#30456;&#20851;&#30693;&#35782;
+BookmarkLevel: 2
+BookmarkPageNumber: 50
+BookmarkTitle: 6.11 &#35838;&#21518;&#32451;&#20064;
+BookmarkLevel: 2
+BookmarkPageNumber: 50
+BookmarkTitle: 6.12 &#24635;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 51
+BookmarkTitle: 6.13 &#21442;&#32771;
+BookmarkLevel: 2
+BookmarkPageNumber: 51
+BookmarkTitle: 7 &#39033;&#30446;&#23454;&#36341;&#65306;Game of life
+BookmarkLevel: 1
+BookmarkPageNumber: 53
+BookmarkTitle: 7.1 &#24120;&#35265;&#38382;&#39064;
+BookmarkLevel: 2
+BookmarkPageNumber: 53
+BookmarkTitle: 7.1.1 &#36807;&#24230;&#25215;&#35834;&#65288;over commit&#65289;
+BookmarkLevel: 3
+BookmarkPageNumber: 53
+BookmarkTitle: 7.1.2 &#27809;&#26377;&#22242;&#38431;&#31934;&#31070;
+BookmarkLevel: 3
+BookmarkPageNumber: 53
+BookmarkTitle: 7.2 &#23567;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 53
+BookmarkTitle: &#38468;&#24405;  A &#22521;&#35757;&#31034;&#20363;&#27169;&#26495;
+BookmarkLevel: 1
+BookmarkPageNumber: 0
+BookmarkTitle: A.1 &#26102;&#38388;&#23433;&#25490;
+BookmarkLevel: 2
+BookmarkPageNumber: 55
+BookmarkTitle: A.2 &#22521;&#35757;&#30340;&#26448;&#26009;
+BookmarkLevel: 2
+BookmarkPageNumber: 55
+BookmarkTitle: A.3 &#22521;&#35757;&#36127;&#36131;&#20154;&#20934;&#22791;&#24037;&#20316;
+BookmarkLevel: 2
+BookmarkPageNumber: 55
+BookmarkTitle: A.4 &#21453;&#39304;
+BookmarkLevel: 2
+BookmarkPageNumber: 56
+BookmarkTitle: &#38468;&#24405;  B &#20225;&#19994;&#29256;&#26412;&#25511;&#21046;&#30340;&#25913;&#38761;&#65306;&#36208;&#21521;Git
+BookmarkLevel: 1
+BookmarkPageNumber: 0
+BookmarkTitle: B.1 &#20102;&#35299;&#26368;&#26032;&#25216;&#26415;-&#20998;&#24067;&#24335;&#29256;&#26412;&#25511;&#21046;&#65288;DVCS&#65289;
+BookmarkLevel: 2
+BookmarkPageNumber: 57
+BookmarkTitle: B.2 &#23581;&#35797;&#22312;&#26085;&#24120;&#20013;&#20351;&#29992;&#20998;&#24067;&#24335;&#29256;&#26412;&#25511;&#21046;
+BookmarkLevel: 2
+BookmarkPageNumber: 57
+BookmarkTitle: B.3 &#23459;&#25196;&#21644;&#25512;&#24191;&#20998;&#24067;&#24335;&#29256;&#26412;&#25511;&#21046;
+BookmarkLevel: 2
+BookmarkPageNumber: 58
+BookmarkTitle: B.4 &#35814;&#32454;&#30740;&#31350;&#29256;&#26412;&#36801;&#31227;
+BookmarkLevel: 2
+BookmarkPageNumber: 58
+BookmarkTitle: B.5 &#24320;&#22987;&#22312;&#23567;&#33539;&#22260;&#23454;&#26045;
+BookmarkLevel: 2
+BookmarkPageNumber: 58
+BookmarkTitle: B.6 &#25512;&#24191;&#12289;&#24182;&#24341;&#20837;Gerrit&#20570;&#20195;&#30721;&#23457;&#26597;
+BookmarkLevel: 2
+BookmarkPageNumber: 59
+BookmarkTitle: B.7 &#23567;&#32467;
+BookmarkLevel: 2
+BookmarkPageNumber: 59
+PageLabelNewIndex: 1
+PageLabelStart: 1
+PageLabelNumStyle: DecimalArabicNumerals
+PageLabelNewIndex: 3
+PageLabelStart: 1
+PageLabelNumStyle: LowercaseRomanNumerals
+PageLabelNewIndex: 15
+PageLabelStart: 1
+PageLabelNumStyle: DecimalArabicNumerals
