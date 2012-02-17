@@ -153,7 +153,7 @@ def terminate(connection ,instance_id)
     #server.start
     #display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
     if server.state == "stopped"
-        puts "Stopped instance can not be terminated, please start it first, this could be a bug (-^-)"
+        puts "Stopped instance can not be terminated, please start it first"
         return
     end
     print "Now terminate server #{instance_id} ..."
