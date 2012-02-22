@@ -47,6 +47,9 @@ def main()
         opts.on("-n","--name DISPLAY_NAME","give instance a name when creating") do |display_name|
             options[:display_name] = display_name
         end
+        opts.on("-f","--flavor FLAVOR","give instance a flavor when creating") do |flavor|
+            options[:flavor] = flavor
+        end
         opts.on("-t","--terminate INSTANCE_ID","terminate/delete instance") do |instance_id|
             options[:command] = "terminate"
             options[:instance_id] = instance_id
@@ -71,26 +74,26 @@ def main()
     puts compute if options["debug"]
 
     case options[:command] 
-    when "list" then list(compute,options[:instance_id])
-    when "start" then start(compute,options[:instance_id])
-    when "stop" then stop(compute,options[:instance_id])
-    when "create" then create(compute,options[:image_id],options[:display_name])
-    when "terminate" then terminate(compute,options[:instance_id])
-    when "reboot" then reboot(compute,options[:instance_id])
+    when "list" then list(compute, options[:instance_id])
+    when "start" then start(compute, options[:instance_id])
+    when "stop" then stop(compute, options[:instance_id])
+    when "create" then create(compute, options[:image_id],options[:display_name], options[:flavor])
+    when "terminate" then terminate(compute, options[:instance_id])
+    when "reboot" then reboot(compute, options[:instance_id])
     
     else puts "\ncommand '#{options[:command]}' is not supported yet"
     end
     puts "\n\n..Thanks for using openstack.rb"
 end
 
-def list(connection,instance_id)
+def list(connection, instance_id)
     instance_list = connection.servers.all
     num_instances = instance_list.length
-    puts "We have " + num_instances.to_s()  + " servers"
+    puts "We have " + num_instances.to_s  + " servers"
 
-    header = [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:image_id ]
+    header = [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :image_id ]
     if instance_id 
-        display(connection.servers.get(instance_id),header)
+        display(connection.servers.get(instance_id), header)
     else
         instance_list.table(header)
     #connection.describe_instances('instance-id'=> 'i-0000000f')
@@ -113,47 +116,48 @@ def list(connection,instance_id)
     end    
 end
 
-def start(connection ,instance_id)
+def start(connection, instance_id)
     server = connection.servers.get(instance_id)
     #server.start
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
     print "Now start server #{instance_id} ..."
     server.start
     # wait for it to be ready to do stuff
     server.wait_for { print "."; ready? }
     puts ""    
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
 end
 
-def stop(connection ,instance_id)
+def stop(connection, instance_id)
     server = connection.servers.get(instance_id)
     #server.start
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server, [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
     print "Now stop server #{instance_id} ..."
     server.stop
     # wait for it to be ready to do stuff
     server.wait_for { print "."; not ready? }
     puts ""
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server, [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
 end
 
-def create(connection,image_id,display_name,flavor_id="m1.tiny")
-    image_id = "ami-00000001" unless image_id
+def create(connection, image_id, display_name, flavor_id = "m1.tiny")
+    image_id = "ami-00000003" unless image_id
+    flavor = "m1.macloud" unless flavor_id
     print "Now create server from image #{image_id} ..."
-    server = connection.servers.create(:image_id=>image_id,:display_name=>display_name,:flavor_id =>flavor_id)
+    server = connection.servers.create(:image_id => image_id, :display_name => display_name, :flavor_id => flavor_id)
 # wait for it to be ready to do stuff
     server.wait_for { print "."; ready? }
     puts ""    
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server, [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
     puts "Please use #{server.public_ip_address} to connect"
 end
 
-def terminate(connection ,instance_id)
+def terminate(connection, instance_id)
     server = connection.servers.get(instance_id)
     #server.start
     #display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
     if server.state == "stopped"
-        puts "Stopped instance can not be terminated, please start it first"
+        puts "Stopped instance can not be terminated, please start it first, this could be a bug (-^-)"
         return
     end
     print "Now terminate server #{instance_id} ..."
@@ -165,16 +169,16 @@ def terminate(connection ,instance_id)
       if exception.message.include? "went away"
         puts ""
         server.state = "terminated"
-        display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+        display(server, [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
       else
         puts "Failed to terminate, please check /var/log/nova/nova-api.log"
       end
     end
 end
-def reboot(connection ,instance_id)
+def reboot(connection, instance_id)
     server = connection.servers.get(instance_id)
     #server.start
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server, [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
     
     print "Now rebooting server #{instance_id} ..."
     server.reboot
@@ -184,11 +188,11 @@ def reboot(connection ,instance_id)
     # wait for it to be ready to do stuff
     #server.wait_for { print "."; ready? }
     puts ""
-    display(server,[:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state,:created_at,:image_id ])
+    display(server, [:id, :display_name, :flavor_id, :public_ip_address, :private_ip_address, :state, :created_at, :image_id])
 end
 
 #https://github.com/geemus/formatador/blob/master/lib/formatador/table.rb
-def display(server,attributes=nil)
+def display(server, attributes = nil)
     #p server.attributes
     Formatador.display_table([server.attributes], attributes)
     #p server.instance_initiated_shutdown_behavior
