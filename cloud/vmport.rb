@@ -34,9 +34,8 @@ def stop(ip, seq)
 end
 
 def status(ip)
-  output = `#{ps_command(ip)}`
   ports = []
-  output.split(" ").grep /-L(.*)/ do
+  `#{ps_command(ip)}`.split(" ").grep /-L(.*)/ do
     ports << $1.split(":")[0]
   end
 
