@@ -34,7 +34,7 @@ def main
   options = OpenStruct.new
 
   option_parser = OptionParser.new do |opts|
-    opts.banner = "Usage: pf.rb -i, --ip <ip> -s, --seq <seq> <start|stop>"
+    opts.banner = "Usage: pf.rb -i, --ip <ip> -s, --seq <seq> {start|stop}"
 
     opts.on("-i", "--ip ip", "ip address of the instance") do |ip|
       options.ip = ip
