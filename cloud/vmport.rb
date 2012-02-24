@@ -40,53 +40,64 @@ def status(ip, seq)
     ports << $1.split(":")[0]
   end
 
-  ports.each do |p|
-    entry = PORT_MAP.find { |e| p.include?(e[0]) }
-    puts "#{entry[1][1].to_s}:#{" " * (10 - entry[1][1].to_s.size)} #{p}" if entry
+  yield ports if block_given?
+end
+
+def execute_command(opts, options)
+  options.seq ||= options.ip.split(".")[-1]
+  case ARGV[0]
+  when "start" then start(options.ip, options.seq) do |successful, seq|
+      if successful
+        PORT_MAP.each_entry do |key, val|
+          puts "#{val[1].to_s}:#{" " * (10 - val[1].to_s.size)} #{key}#{seq}"
+        end
+      else
+        puts "failed to start port forwarding"
+      end
+    end
+  when "stop" then stop(options.ip, options.seq) do |successful|
+      if successful
+        puts "port forwarding stopped"
+      else
+        puts "failed to stop port forwarding"
+      end
+    end
+  when "status" then status(options.ip, options.seq) do |ports|
+      ports.each do |p|
+        entry = PORT_MAP.find { |e| p.include?(e[0]) }
+        puts "#{entry[1][1].to_s}:#{" " * (10 - entry[1][1].to_s.size)} #{p}" if entry
+      end
+    end
+  else puts opts
   end
 end
 
 def main
   options = OpenStruct.new
 
-  option_parser = OptionParser.new do |opts|
-    opts.banner = "Usage: pf.rb -i, --ip <ip> [-s, --seq <seq>] {start|stop|status}"
+  opts = OptionParser.new do |opts|
+    opts.banner = "Usage: #{File.basename($PROGRAM_NAME)} -i, --ip <ip> [-s, --seq <seq>] {start|stop|status}"
 
     opts.on("-i", "--ip ip", "ip address of the instance") do |ip|
       options.ip = ip
     end
 
-    opts.on("-s", "--seq [seq]", "sequence number used as port suffix") do |seq|
+    opts.on("-s", "--seq seq", "sequence number used as port suffix,", "if omited, last fragment of ip address will be used") do |seq|
       options.seq = seq
+    end
+
+    opts.on_tail("-h", "--help", "show this message") do
+      puts opts
+      exit
     end
   end
 
-  option_parser.parse!
+  opts.parse!
 
   if not options.ip
-    puts option_parser.help
+    puts opts
   else
-    options.seq ||= options.ip.split(".")[-1]
-    case ARGV[0]
-    when "start" then start(options.ip, options.seq) do |successful, seq|
-        if successful
-          PORT_MAP.each_entry do |key, val|
-            puts "#{val[1].to_s}:#{" " * (10 - val[1].to_s.size)} #{key}#{seq}"
-          end
-        else
-          puts "failed to start port forwarding"
-        end
-      end
-    when "stop" then stop(options.ip, options.seq) do |successful|
-        if successful
-          puts "port forwarding stopped"
-        else
-          puts "failed to stop port forwarding"
-        end
-      end
-    when "status" then status(options.ip, options.seq)
-    else puts option_parser.help
-    end
+    execute_command(opts, options)
   end
 end
 
