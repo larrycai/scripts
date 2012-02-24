@@ -10,7 +10,7 @@ PORT_MAP = {
   "198" => ["8998", :cai3g]
 }
 
-def ps_command(ip, seq)
+def ps_command(ip, seq = "")
   "ps -ewwf | egrep 'ssh .*[0-9].*#{seq}:#{ip}:[0-9]+' | grep -v grep"
 end
 
@@ -33,8 +33,8 @@ def stop(ip, seq)
   yield successful if block_given?
 end
 
-def status(ip, seq)
-  output = `#{ps_command(ip, seq)}`
+def status(ip)
+  output = `#{ps_command(ip)}`
   ports = []
   output.split(" ").grep /-L(.*)/ do
     ports << $1.split(":")[0]
@@ -62,7 +62,7 @@ def execute_command(opts, options)
         puts "failed to stop port forwarding"
       end
     end
-  when "status" then status(options.ip, options.seq) do |ports|
+  when "status" then status(options.ip) do |ports|
       ports.each do |p|
         entry = PORT_MAP.find { |e| p.include?(e[0]) }
         puts "#{entry[1][1].to_s}:#{" " * (10 - entry[1][1].to_s.size)} #{p}" if entry
@@ -82,7 +82,9 @@ def main
       options.ip = ip
     end
 
-    opts.on("-s", "--seq seq", "sequence number used as port suffix,", "if omited, last fragment of ip address will be used") do |seq|
+    opts.on("-s", "--seq seq", "sequence number used as port suffix",
+            "if omitted, last fragment of ip address will be used",
+            "for status command, this option will be ignored") do |seq|
       options.seq = seq
     end
 
