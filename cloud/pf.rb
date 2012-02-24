@@ -30,9 +30,6 @@ def stop(ip, seq)
   yield successful if block_given?
 end
 
-def start_or_stop
-end
-
 def main
   options = OpenStruct.new
 
@@ -54,7 +51,7 @@ def main
     puts option_parser.help
   else
     case ARGV[0]
-    when 'start' then start(options.ip, options.seq) do |successful, seq|
+    when "start" then start(options.ip, options.seq) do |successful, seq|
         if successful
           PORT_MAP.each_entry do |key, val|
             puts "#{val[1].to_s}:#{" " * (10 - val[1].to_s.size)} #{key}#{seq}"
@@ -63,7 +60,7 @@ def main
           puts "failed to start port forwarding"
         end
       end
-    when 'stop' then stop(options.ip, options.seq) do |successful|
+    when "stop" then stop(options.ip, options.seq) do |successful|
         if successful
           puts "port forwarding stopped"
         else
