@@ -10,6 +10,8 @@ PORT_MAP = {
   "198" => ["8998", :cai3g]
 }
 
+SILENT = "> /dev/null 2>&1"
+
 def ps_command(ip, seq = "")
   "ps -ewwf | egrep 'ssh .*[0-9].*#{seq}:#{ip}:[0-9]+' | grep -v grep"
 end
@@ -19,7 +21,7 @@ def start(ip, seq)
   PORT_MAP.each_entry do |key, val|
     command += " -L#{key}#{seq}:#{ip}:#{val[0]}"
   end
-  command += " -gfN localhost > /dev/null 2>&1"
+  command += " -gfN localhost #{SILENT}"
 
   successful = system(command)
   yield successful, seq if block_given?
@@ -27,7 +29,7 @@ end
 
 def stop(ip, seq)
   # hope we're killing the right people
-  command = "#{ps_command(ip, seq)} | awk '{print $2}' | xargs kill -9 > /dev/null 2>&1"
+  command = "#{ps_command(ip, seq)} | awk '{print $2}' | xargs kill -9 #{SILENT}"
 
   successful = system(command)
   yield successful if block_given?
