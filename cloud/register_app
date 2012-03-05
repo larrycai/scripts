@@ -1,0 +1,59 @@
+#!/bin/sh
+
+### BEGIN INIT INFO 
+# Provides:          register_app
+# Required-Start:
+# Should-Start:  emactl
+# Required-Stop:
+# Default-Start: 3 5
+# Default-Stop:  0 1 2 4 6
+# Short-Description: register app instance ip address
+# Description:
+#
+### END INIT INFO
+
+
+# **********************************************************************
+# Copyright (c) 2011 Ericsson Software Technology AB, Sweden.
+# All rights reserved.
+# The Copyright to the computer program(s) herein is the property of
+# Ericsson Software Technology AB, Sweden.
+# The program(s) may be used and/or copied with the written permission
+# from Ericsson Software Technology AB or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+# **********************************************************************
+
+. /etc/rc.status
+
+IP=`/sbin/ifconfig eth0 | egrep -o "addr:[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" | awk -F: '{print $2}'`
+
+case "$1" in
+start)
+    curl -d "ip=$IP" http://192.168.4.1:9393/app
+    if [ $? -ne 0 ] ; then
+        rc_failed 2
+        rc_status -v
+        rc_exit
+    fi
+    rc_status -v
+    ;;
+stop)
+    curl -X DELETE -d "ip=$IP" http://192.168.4.1:9393/app
+    if [ $? -ne 0 ] ; then
+        rc_failed 2
+        rc_status -v
+        rc_exit
+    fi
+    rc_status -v
+    ;;
+restart)
+    $0 stop
+    $0 start
+    rc_status
+    ;;
+*)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+rc_exit

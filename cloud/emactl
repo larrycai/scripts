@@ -1,0 +1,52 @@
+#!/bin/sh
+
+### BEGIN INIT INFO 
+# Provides:          emactl
+# Required-Start:
+# Should-Start:  nfs cron update_db
+# Required-Stop:
+# Default-Start: 3 5
+# Default-Stop:  0 1 2 4 6
+# Short-Description: EMA AS auto reboot/shutdown
+# Description:
+#
+### END INIT INFO
+
+
+# **********************************************************************
+# Copyright (c) 2011 Ericsson Software Technology AB, Sweden.
+# All rights reserved.
+# The Copyright to the computer program(s) herein is the property of
+# Ericsson Software Technology AB, Sweden.
+# The program(s) may be used and/or copied with the written permission
+# from Ericsson Software Technology AB or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+# **********************************************************************
+
+CURRENTUID=`id -u`
+
+if [ $CURRENTUID != "0" ]; then
+    echo this script must run as root!
+    exit;
+fi
+
+
+
+EMAUSER=sogadm
+case "$1" in
+start)
+    su - $EMAUSER -c "/opt/sog/bin/emaserver start"
+    ;;
+stop)
+    su - $EMAUSER -c "/opt/sog/bin/emaserver stop"
+    ;;
+status)
+    su - $EMAUSER -c "/opt/sog/bin/emaserver status"
+    ;;
+restart)
+    su - $EMAUSER -c "/opt/sog/bin/emaserver restart"
+    ;;
+esac
+exit 0
+
