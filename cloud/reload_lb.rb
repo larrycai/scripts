@@ -20,7 +20,7 @@ EM.run do
       cai3g = instances.map { |instance| "server #{instance} #{instance}:8998 check" }.join("\n\t")
 
       template = ERB.new(File.read(TEMPLATE_CFG_FILE))
-      File.write(CFG_FILE, template.result(binding))
+      File.open(CFG_FILE, "w") { |cfg_file| cfg_file.puts template.result(binding) }
 
       `/etc/init.d/haproxy reload`
 
